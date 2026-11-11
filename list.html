@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Page</title>
+    <!-- Tailwind CSS v4 via CDN -->
+    <script src="https://cdn.tailwindcss.com/4.0.0"></script>
+    <style>
+        /* Gradient animated background */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 30%, #f093fb 60%, #f5576c 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0%   { background-position: 0% 50%; }
+            50%  { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism card */
+        .glass {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        }
+
+        /* List item hover glow */
+        .list-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(6px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center p-8">
+
+    <div class="w-full max-w-xl space-y-8">
+
+        <!-- Page Title -->
+        <div class="text-center">
+            <h1 class="text-4xl font-extrabold text-white drop-shadow-lg tracking-wide">
+                📋 My Lists
+            </h1>
+            <p class="text-white/70 mt-2 text-sm tracking-widest uppercase">Styled with Tailwind CSS v4</p>
+        </div>
+
+        <!-- Unordered List Card -->
+        <div class="glass rounded-3xl p-7">
+            <div class="flex items-center gap-3 mb-5">
+                <span class="text-2xl">🔘</span>
+                <h2 class="text-xl font-bold text-white tracking-wide">Unordered List (ul)</h2>
+                <span class="ml-auto text-xs text-white/50 uppercase tracking-widest"></span>
+            </div>
+            <li class="space-y-3">
+                <li class="list-item flex items-center gap-3 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-pink-300 shadow-md shadow-pink-400/50 flex-shrink-0"></span>
+                    Subscribe
+                </li>
+                <li class="list-item flex items-center gap-3 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-purple-300 shadow-md shadow-purple-400/50 flex-shrink-0"></span>
+                    Follow
+                </li>
+                <li class="list-item flex items-center gap-3 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-blue-300 shadow-md shadow-blue-400/50 flex-shrink-0"></span>
+                    Comment
+                </li>
+                <li class="list-item flex items-center gap-3 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-2 h-2 rounded-full bg-indigo-300 shadow-md shadow-indigo-400/50 flex-shrink-0"></span>
+                    Share
+                </li>
+            </ul>
+        </div>
+
+        <!-- Divider -->
+        <div class="flex items-center gap-4">
+            <div class="flex-1 h-px bg-white/20"></div>
+            <span class="text-white/40 text-xs tracking-widest uppercase"></span>
+            <div class="flex-1 h-px bg-white/20"></div>
+        </div>
+
+        <!-- Ordered List Card -->
+        <div class="glass rounded-3xl p-7">
+            <div class="flex items-center gap-3 mb-5">
+                <span class="text-2xl">📝</span>
+                <h2 class="text-xl font-bold text-white tracking-wide">Ordered List (ol)</h2>
+                <span class="ml-auto text-xs text-white/50 uppercase tracking-widest"></span>
+            </div>
+            <li class="space-y-3">
+                <li class="list-item flex items-center gap-4 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-purple-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0 shadow-md">1</span>
+                    Buka YouTube.com
+                </li>
+                <li class="list-item flex items-center gap-4 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400 to-blue-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0 shadow-md">2</span>
+                    Cari Akun @adiialwayz
+                </li>
+                <li class="list-item flex items-center gap-4 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-7 h-7 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0 shadow-md">3</span>
+                    Lalu click tombol Subscribe
+                </li>
+                <li class="list-item flex items-center gap-4 text-white/90 font-medium px-4 py-3 rounded-xl transition-all duration-200 cursor-default">
+                    <span class="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-400 to-pink-500 text-white text-sm font-bold flex items-center justify-center flex-shrink-0 shadow-md">4</span>
+                    Nyalakan notifikasi di pojok kanan atas
+                </li>
+            </ul>
+        </div>
+
+        <!-- Footer -->
+        <p class="text-center text-white/30 text-xs tracking-widest">✨ Glassmorphism &amp; Gradient UI</p>
+
+    </div>
+
+</body>
+</html>
